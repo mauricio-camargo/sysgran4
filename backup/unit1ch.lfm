@@ -1,0 +1,448 @@
+object Form1: TForm1
+  Left = 341
+  Height = 741
+  Top = 225
+  Width = 915
+  Caption = 'Form1'
+  ClientHeight = 741
+  ClientWidth = 915
+  DesignTimePPI = 144
+  Position = poScreenCenter
+  LCLVersion = '2.2.2.0'
+  object Chart1: TChart
+    Left = 0
+    Height = 549
+    Top = 0
+    Width = 915
+    AntialiasingMode = amOn
+    AxisList = <    
+      item
+        Grid.Color = clGray
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.Visible = True
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Grid.Color = clGray
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.Visible = True
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Alignment = taLeftJustify
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clRed
+    Foot.Font.Style = [fsBold]
+    Foot.Text.Strings = (
+      'This a LeftAligned Footer'
+    )
+    Legend.Font.Height = -11
+    Legend.Font.Name = 'MS Sans Serif'
+    Title.Brush.Color = clBtnFace
+    Title.Margin = 8
+    Title.Text.Strings = (
+      'Centered Chart Title'
+    )
+    Title.Visible = True
+    Toolset = ChartToolset1
+    Align = alClient
+    object Chart1LineHor: TConstantLine
+      Legend.Visible = False
+      Pen.Style = psDash
+    end
+    object Chart1LineVert: TConstantLine
+      Legend.Visible = False
+      LineStyle = lsVertical
+      Pen.Style = psDash
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 180
+    Top = 561
+    Width = 915
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 180
+    ClientWidth = 915
+    TabOrder = 0
+    object lblAdd: TLabel
+      AnchorSideTop.Control = btnAddPie
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = lblClear
+      AnchorSideRight.Side = asrBottom
+      Left = 17
+      Height = 25
+      Top = 17
+      Width = 38
+      Anchors = [akTop, akRight]
+      Caption = 'Add:'
+      ParentColor = False
+    end
+    object lblClear: TLabel
+      AnchorSideLeft.Control = Panel1
+      AnchorSideTop.Control = btnClearPie
+      AnchorSideTop.Side = asrCenter
+      Left = 12
+      Height = 25
+      Top = 58
+      Width = 43
+      BorderSpacing.Left = 12
+      Caption = 'Clear:'
+      ParentColor = False
+    end
+    object lblAddCount: TLabel
+      AnchorSideLeft.Control = btnClearAll
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnAddPie
+      Left = 404
+      Height = 25
+      Top = 12
+      Width = 100
+      BorderSpacing.Left = 24
+      Caption = 'Multiple add'
+      ParentColor = False
+    end
+    object lblMarkStyle: TLabel
+      AnchorSideLeft.Control = btnAddPie
+      AnchorSideTop.Control = cbMarkStyle
+      AnchorSideTop.Side = asrCenter
+      Left = 67
+      Height = 25
+      Top = 139
+      Width = 129
+      Caption = 'Add with marks:'
+      ParentColor = False
+    end
+    object btnAddPie: TButton
+      AnchorSideLeft.Control = btnClearPie
+      AnchorSideTop.Control = Panel1
+      Left = 67
+      Height = 35
+      Top = 12
+      Width = 49
+      AutoSize = True
+      BorderSpacing.Top = 12
+      Caption = 'Pie'
+      OnClick = btnAddPieClick
+      TabOrder = 0
+    end
+    object btnAddLine: TButton
+      AnchorSideLeft.Control = btnClearLine
+      AnchorSideTop.Control = btnAddPie
+      Left = 265
+      Height = 35
+      Top = 12
+      Width = 57
+      AutoSize = True
+      Caption = 'Line'
+      OnClick = btnAddLineClick
+      TabOrder = 1
+    end
+    object btnAddArea: TButton
+      AnchorSideLeft.Control = btnClearArea
+      AnchorSideTop.Control = btnAddPie
+      Left = 128
+      Height = 35
+      Top = 12
+      Width = 62
+      AutoSize = True
+      Caption = 'Area'
+      OnClick = btnAddAreaClick
+      TabOrder = 2
+    end
+    object btnAddBar: TButton
+      AnchorSideLeft.Control = btnClearBar
+      AnchorSideTop.Control = btnAddPie
+      Left = 202
+      Height = 35
+      Top = 12
+      Width = 51
+      AutoSize = True
+      Caption = 'Bar'
+      OnClick = btnAddBarClick
+      TabOrder = 3
+    end
+    object cbLegend: TCheckBox
+      AnchorSideLeft.Control = edAddCount
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = Panel1
+      Left = 563
+      Height = 29
+      Top = 10
+      Width = 88
+      BorderSpacing.Left = 24
+      BorderSpacing.Top = 10
+      Caption = 'Legend'
+      OnChange = cbLegendChange
+      TabOrder = 4
+    end
+    object cbBottomAxis: TCheckBox
+      AnchorSideLeft.Control = cbLegend
+      AnchorSideTop.Control = cbLegend
+      AnchorSideTop.Side = asrBottom
+      Left = 563
+      Height = 29
+      Top = 39
+      Width = 127
+      Caption = 'Bottom Axis'
+      Checked = True
+      OnChange = cbBottomAxisChange
+      State = cbChecked
+      TabOrder = 5
+    end
+    object cbLeftAxis: TCheckBox
+      AnchorSideLeft.Control = cbLegend
+      AnchorSideTop.Control = cbBottomAxis
+      AnchorSideTop.Side = asrBottom
+      Left = 563
+      Height = 29
+      Top = 68
+      Width = 96
+      Caption = 'Left Axis'
+      Checked = True
+      OnChange = cbLeftAxisChange
+      State = cbChecked
+      TabOrder = 6
+    end
+    object cbTitle: TCheckBox
+      AnchorSideLeft.Control = cbFooter
+      AnchorSideTop.Control = cbLegend
+      Left = 702
+      Height = 29
+      Top = 10
+      Width = 62
+      BorderSpacing.Right = 12
+      Caption = 'Title'
+      Checked = True
+      OnChange = cbTitleChange
+      State = cbChecked
+      TabOrder = 7
+    end
+    object cbFooter: TCheckBox
+      AnchorSideLeft.Control = cbBottomAxis
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbLegend
+      AnchorSideTop.Side = asrBottom
+      Left = 702
+      Height = 29
+      Top = 39
+      Width = 82
+      BorderSpacing.Left = 12
+      BorderSpacing.Right = 12
+      Caption = 'Footer'
+      OnChange = cbFooterChange
+      TabOrder = 8
+    end
+    object cbInverted: TCheckBox
+      AnchorSideLeft.Control = cbFooter
+      AnchorSideTop.Control = cbFooter
+      AnchorSideTop.Side = asrBottom
+      Left = 702
+      Height = 29
+      Top = 68
+      Width = 95
+      BorderSpacing.Right = 12
+      Caption = 'Inverted'
+      OnChange = cbInvertedChange
+      TabOrder = 9
+    end
+    object btnClearBar: TButton
+      AnchorSideLeft.Control = btnClearArea
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnClearPie
+      Left = 202
+      Height = 35
+      Top = 53
+      Width = 51
+      AutoSize = True
+      BorderSpacing.Left = 12
+      Caption = 'Bar'
+      OnClick = btnClearBarClick
+      TabOrder = 10
+    end
+    object btnClearArea: TButton
+      AnchorSideLeft.Control = btnClearPie
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnClearPie
+      Left = 128
+      Height = 35
+      Top = 53
+      Width = 62
+      AutoSize = True
+      BorderSpacing.Left = 12
+      Caption = 'Area'
+      OnClick = btnClearAreaClick
+      TabOrder = 11
+    end
+    object btnClearLine: TButton
+      AnchorSideLeft.Control = btnClearBar
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnClearPie
+      Left = 265
+      Height = 35
+      Top = 53
+      Width = 57
+      AutoSize = True
+      BorderSpacing.Left = 12
+      Caption = 'Line'
+      OnClick = btnClearLineClick
+      TabOrder = 12
+    end
+    object btnClearPie: TButton
+      AnchorSideLeft.Control = lblClear
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnAddPie
+      AnchorSideTop.Side = asrBottom
+      Left = 67
+      Height = 35
+      Top = 53
+      Width = 49
+      AutoSize = True
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 6
+      Caption = 'Pie'
+      OnClick = btnClearPieClick
+      TabOrder = 13
+    end
+    object edAddCount: TSpinEdit
+      AnchorSideLeft.Control = lblAddCount
+      AnchorSideTop.Control = lblAddCount
+      AnchorSideTop.Side = asrBottom
+      Left = 404
+      Height = 33
+      Top = 40
+      Width = 135
+      BorderSpacing.Top = 3
+      MaxValue = 1000000
+      MinValue = 1
+      TabOrder = 14
+      Value = 1
+    end
+    object cbShowGridCheckBox: TCheckBox
+      AnchorSideLeft.Control = cbLegend
+      AnchorSideTop.Control = cbLeftAxis
+      AnchorSideTop.Side = asrBottom
+      Left = 563
+      Height = 29
+      Top = 97
+      Width = 116
+      Caption = 'Show grid '
+      Checked = True
+      OnChange = cbShowGridCheckBoxChange
+      State = cbChecked
+      TabOrder = 15
+    end
+    object cbShowAxisTitles: TCheckBox
+      AnchorSideLeft.Control = cbFooter
+      AnchorSideTop.Control = cbInverted
+      AnchorSideTop.Side = asrBottom
+      Left = 702
+      Height = 29
+      Top = 97
+      Width = 104
+      BorderSpacing.Right = 12
+      Caption = 'Axis titles'
+      OnChange = cbShowAxisTitlesChange
+      TabOrder = 16
+    end
+    object cbMarkStyle: TComboBox
+      AnchorSideLeft.Control = lblMarkStyle
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = cbCrosshairTool
+      Left = 208
+      Height = 33
+      Top = 135
+      Width = 204
+      BorderSpacing.Left = 12
+      BorderSpacing.Bottom = 12
+      ItemHeight = 25
+      ItemIndex = 5
+      Items.Strings = (
+        'smsCustom'
+        'smsNone'
+        'smsValue'
+        'smsPercent'
+        'smsLabel'
+        'smsLabelPercent'
+        'smsLabelValue'
+        'smsLegend'
+        'smsPercentTotal'
+        'smsLabelPercentTotal'
+        'smsXValue'
+      )
+      Style = csDropDownList
+      TabOrder = 17
+      Text = 'smsLabelPercent'
+    end
+    object btnClearAll: TButton
+      AnchorSideLeft.Control = btnClearLine
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideTop.Control = btnClearPie
+      Left = 334
+      Height = 35
+      Top = 53
+      Width = 46
+      AutoSize = True
+      BorderSpacing.Left = 12
+      Caption = 'All'
+      OnClick = btnClearAllClick
+      TabOrder = 18
+    end
+    object lblCrossHairTool: TLabel
+      AnchorSideTop.Control = cbCrosshairTool
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = cbCrosshairTool
+      Left = 437
+      Height = 25
+      Top = 139
+      Width = 114
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 12
+      Caption = 'Crosshair tool:'
+      ParentColor = False
+    end
+    object cbCrosshairTool: TComboBox
+      AnchorSideLeft.Control = cbShowGridCheckBox
+      AnchorSideTop.Control = cbShowGridCheckBox
+      AnchorSideTop.Side = asrBottom
+      Left = 563
+      Height = 33
+      Top = 135
+      Width = 232
+      BorderSpacing.Top = 9
+      ItemHeight = 25
+      ItemIndex = 0
+      Items.Strings = (
+        'none'
+        'Vertical'
+        'Horizontal'
+        'Both'
+      )
+      OnChange = cbCrosshairToolChange
+      Style = csDropDownList
+      TabOrder = 19
+      Text = 'none'
+    end
+  end
+  object Bevel1: TBevel
+    Left = 0
+    Height = 12
+    Top = 549
+    Width = 915
+    Align = alBottom
+    Shape = bsBottomLine
+  end
+  object ChartToolset1: TChartToolset
+    Left = 360
+    Top = 173
+    object DataPointCrosshairTool: TDataPointCrosshairTool
+      Enabled = False
+      GrabRadius = 40
+    end
+  end
+end
