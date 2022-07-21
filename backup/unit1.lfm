@@ -1089,7 +1089,7 @@ object Form1: TForm1
           TabOrder = 0
           Visible = False
           object RBFreq: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 15
             Width = 257
@@ -1100,7 +1100,7 @@ object Form1: TForm1
             TabStop = True
           end
           object RBShep: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 43
             Width = 229
@@ -1109,7 +1109,7 @@ object Form1: TForm1
             TabOrder = 0
           end
           object RBPej: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 73
             Width = 212
@@ -1118,7 +1118,7 @@ object Form1: TForm1
             TabOrder = 1
           end
           object RBHist: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 101
             Width = 135
@@ -1127,7 +1127,7 @@ object Form1: TForm1
             TabOrder = 3
           end
           object RBProb: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 130
             Width = 275
@@ -1136,7 +1136,7 @@ object Form1: TForm1
             TabOrder = 4
           end
           object RBBiva: TRadioButton
-            Left = 6
+            Left = 38
             Height = 28
             Top = 159
             Width = 199
@@ -1265,7 +1265,7 @@ object Form1: TForm1
           object Label6: TLabel
             Left = 15
             Height = 24
-            Top = 2
+            Top = 20
             Width = 74
             Caption = 'Método'
             ParentColor = False
@@ -1273,7 +1273,7 @@ object Form1: TForm1
           object CB4: TComboBox
             Left = 15
             Height = 36
-            Top = 30
+            Top = 46
             Width = 210
             ItemHeight = 0
             ItemIndex = 0
@@ -1292,7 +1292,7 @@ object Form1: TForm1
           object CB2: TComboBox
             Left = 6
             Height = 36
-            Top = 81
+            Top = 97
             Width = 122
             ItemHeight = 0
             ItemIndex = 0
@@ -1310,7 +1310,7 @@ object Form1: TForm1
           object CB3: TComboBox
             Left = 171
             Height = 36
-            Top = 81
+            Top = 97
             Width = 123
             ItemHeight = 0
             ItemIndex = 0
@@ -1326,7 +1326,7 @@ object Form1: TForm1
           object Label7: TLabel
             Left = 144
             Height = 28
-            Top = 89
+            Top = 105
             Width = 16
             Caption = 'X'
             Font.CharSet = ANSI_CHARSET
@@ -1339,9 +1339,9 @@ object Form1: TForm1
           end
         end
         object Panel15: TPanel
-          Left = 1
+          Left = 32
           Height = 257
-          Top = 90
+          Top = 104
           Width = 313
           ClientHeight = 257
           ClientWidth = 313

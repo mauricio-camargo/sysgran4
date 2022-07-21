@@ -19,8 +19,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="64" Y="2"/>
-        <ComponentState Value="2"/>
+        <CursorPos X="37" Y="8"/>
         <UsageCount Value="145"/>
         <Bookmarks Count="4">
           <Item0 Y="199" ID="8"/>
