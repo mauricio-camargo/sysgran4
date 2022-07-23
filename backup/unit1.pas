@@ -167,7 +167,7 @@ type
    PT03,PT05,PT10,PT15,PT16,PT20,PT25,PT30,PT35,PT45,PT50,PT55,PT65,PT70,PT75,PT84,
    PT80,PT85,PT90,PT95,PT97,Media,Sele,Ass,Curt:Extended;
    Med,Se,Assi,Cu:String;
-   VeioDoAbrir,MudorGridR: Boolean;
+   VeioDoAbrir,MudouGridR: Boolean;
    NoAm:Array[1..99] of ShortInt;
    MaxAm,h:Integer;
    IsMenu1Popup,IsMenu2Popup,IsMenu3Popup:Boolean;
@@ -212,7 +212,7 @@ procedure TForm1.ConfirmSave();
 begin
 if Label1.Font.Style=[fsItalic] then
  if MessageDlg('Continuar sem salvar planilha de entrada?',mtConfirmation,[mbYes,mbNo],0)=mrNo then Abort;
-if MudorGridR then
+if MudouGridR then
  if MessageDlg('Continuar sem salvar planilha de resultados?',mtConfirmation,[mbYes,mbNo],0)=mrNo then Abort;
 end;
 
@@ -258,10 +258,12 @@ sWorkbookSource1.FileName:=OpenDialog.FileName;
 Caption:='SysGran 4.0 - '+OpenDialog.FileName;
 VeioDoAbrir:=True;
 PreencheListBox();
-ListBox1.SelectAll;
+ListBox1.SelectAll;                              d
 VeioDoAbrir:=False;
 Label1.Font.Style:=[];
-MudorGridR:=False;
+GridR.NewWorkbook(100,100);
+MudouGridR:=False;
+sWorkbookSource2.Worksheet.Name := 'Resultado1';
 end;
 
 procedure TForm1.BtnAcoesGClick(Sender: TObject);
@@ -1715,7 +1717,7 @@ for z:=0 to ListBox1.Items.Count-1 do begin
   S:=ListBox1.Items[z]; //S=Nome da amostra (A,B,C,D,etc)
   Amost:=z+2 //Número da amostra em relação ao ListBox (14,15,16,17,etc;
  end else continue;
- MudorGridR:=True;
+MudouGridR:=True;
  r:=Nc; //Número de classes de phi (17)
  for g:=1 to r do begin
   Clz[g]:=StrToFloat(Grid.Cells[g+1,1]); //Vetor de classes de phi
@@ -2163,11 +2165,14 @@ IsMenu1Popup:=False;
 ConfirmSave();
 Grid.SetFocus;
 Grid.NewWorkbook(100,100);
+GridR.NewWorkbook(100,100);
 Caption:='SysGran 4.0';
 ListBox1.Clear;
 Label1.Font.Style:=[];
+MudouGridR:=False;
 OpenDialog.FileName:='';
 sWorkbookSource1.Worksheet.Name := 'Planilha1';
+sWorkbookSource2.Worksheet.Name := 'Resultado1';
 end;
 
 procedure TForm1.BtnAcoesClick(Sender: TObject);
@@ -2209,13 +2214,13 @@ if SaveDialogR.FileName='' then begin
  if SaveDialogR.Execute then begin
   Screen.Cursor := crHourglass;
   GridR.SaveToSpreadsheetFile(SaveDialogR.FileName);
-  MudorGridR:=False;
+  MudouGridR:=False;
   Screen.Cursor := crDefault;
  end;
 end else begin
  Screen.Cursor := crHourglass;
  GridR.SaveToSpreadsheetFile(SaveDialogR.FileName);
- MudorGridR:=False;
+ MudouGridR:=False;
  Screen.Cursor := crDefault;
 end;
 end;

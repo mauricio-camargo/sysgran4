@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 62
-  Height = 1005
-  Top = 38
-  Width = 1858
+  Left = 424
+  Height = 691
+  Top = 91
+  Width = 1298
   Caption = 'SysGran 4.0'
-  ClientHeight = 1005
-  ClientWidth = 1858
+  ClientHeight = 691
+  ClientWidth = 1298
   DesignTimePPI = 135
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -14,11 +14,11 @@ object Form1: TForm1
   WindowState = wsMaximized
   object Panel2: TPanel
     Left = 0
-    Height = 1005
+    Height = 691
     Top = 0
     Width = 825
     Align = alLeft
-    ClientHeight = 1005
+    ClientHeight = 691
     ClientWidth = 825
     TabOrder = 0
     object Panel3: TPanel
@@ -251,7 +251,7 @@ object Form1: TForm1
           Left = 135
           Height = 34
           Hint = 'Salvar planilha'
-          Top = 4
+          Top = 5
           Width = 34
           Font.Color = clBlack
           Glyph.Data = {
@@ -352,14 +352,14 @@ object Form1: TForm1
           StateDisabled.BorderWidth = 1
         end
         object Label1: TLabel
-          Left = 364
-          Height = 24
-          Top = 4
+          Left = 365
+          Height = 23
+          Top = 5
           Width = 199
           AutoSize = False
           Caption = 'Planilha de entrada'
           Font.CharSet = ANSI_CHARSET
-          Font.Height = -21
+          Font.Height = -22
           Font.Pitch = fpVariable
           Font.Quality = fqDraft
           ParentColor = False
@@ -529,7 +529,7 @@ object Form1: TForm1
         object BtnAcoes: TColorSpeedButton
           Left = 189
           Height = 34
-          Top = 4
+          Top = 5
           Width = 112
           Caption = 'Ações'
           Font.Color = clBlack
@@ -637,11 +637,11 @@ object Form1: TForm1
     end
     object Panel4: TPanel
       Left = 1
-      Height = 534
+      Height = 220
       Top = 470
       Width = 823
       Align = alClient
-      ClientHeight = 534
+      ClientHeight = 220
       ClientWidth = 823
       TabOrder = 1
       object Panel5: TPanel
@@ -655,12 +655,12 @@ object Form1: TForm1
         TabOrder = 0
         object Label2: TLabel
           Left = 310
-          Height = 24
+          Height = 26
           Top = 2
-          Width = 302
+          Width = 317
           Caption = 'Planilha de Resultados (Análise)'
           Font.CharSet = ANSI_CHARSET
-          Font.Height = -21
+          Font.Height = -22
           Font.Pitch = fpVariable
           Font.Quality = fqDraft
           ParentColor = False
@@ -998,7 +998,7 @@ object Form1: TForm1
       end
       object sWorkbookTabControl2: TsWorkbookTabControl
         Left = 1
-        Height = 493
+        Height = 179
         Top = 40
         Width = 821
         OnChange = sWorkbookTabControl1Change
@@ -1012,7 +1012,7 @@ object Form1: TForm1
         WorkbookSource = sWorkbookSource2
         object gridR: TsWorksheetGrid
           Left = 2
-          Height = 455
+          Height = 141
           Top = 2
           Width = 817
           AutoCalc = True
@@ -1053,39 +1053,39 @@ object Form1: TForm1
   end
   object Panel6: TPanel
     Left = 834
-    Height = 1005
+    Height = 691
     Top = 0
-    Width = 1024
+    Width = 464
     Align = alClient
-    ClientHeight = 1005
-    ClientWidth = 1024
+    ClientHeight = 691
+    ClientWidth = 464
     TabOrder = 1
     object Panel7: TPanel
       Left = 1
       Height = 460
       Top = 1
-      Width = 1022
+      Width = 462
       Align = alTop
       ClientHeight = 460
-      ClientWidth = 1022
+      ClientWidth = 462
       TabOrder = 0
       object Panel10: TPanel
-        Left = 527
+        Left = 461
         Height = 458
         Top = 1
-        Width = 494
+        Width = 1
         Align = alClient
         ClientHeight = 458
-        ClientWidth = 494
+        ClientWidth = 1
         TabOrder = 0
         object Panel12: TPanel
-          Left = 1
+          Left = 0
           Height = 196
-          Top = 49
-          Width = 492
+          Top = 50
+          Width = 1
           Align = alTop
           ClientHeight = 196
-          ClientWidth = 492
+          ClientWidth = 1
           TabOrder = 0
           Visible = False
           object RBFreq: TRadioButton
@@ -1138,7 +1138,7 @@ object Form1: TForm1
           object RBBiva: TRadioButton
             Left = 38
             Height = 28
-            Top = 159
+            Top = 158
             Width = 199
             Caption = 'Gráficos bi-variado'
             OnClick = RBBivaClick
@@ -1146,13 +1146,13 @@ object Form1: TForm1
           end
         end
         object Panel13: TPanel
-          Left = 1
-          Height = 212
-          Top = 245
-          Width = 492
+          Left = 0
+          Height = 211
+          Top = 246
+          Width = 1
           Align = alClient
-          ClientHeight = 212
-          ClientWidth = 492
+          ClientHeight = 211
+          ClientWidth = 1
           TabOrder = 1
           Visible = False
           object CBLabel: TCheckBox
@@ -1192,15 +1192,15 @@ object Form1: TForm1
           object Label5: TLabel
             Left = 6
             Height = 24
-            Top = 159
+            Top = 158
             Width = 195
             Caption = 'Tamanho dos pontos'
             ParentColor = False
           end
           object SpinEdit1: TSpinEdit
-            Left = 194
+            Left = 193
             Height = 38
-            Top = 160
+            Top = 159
             Width = 78
             Font.Height = -17
             Font.Name = 'Sans'
@@ -1212,13 +1212,13 @@ object Form1: TForm1
           end
         end
         object Panel9: TPanel
-          Left = 1
-          Height = 48
+          Left = 0
+          Height = 49
           Top = 1
-          Width = 492
+          Width = 1
           Align = alTop
-          ClientHeight = 48
-          ClientWidth = 492
+          ClientHeight = 49
+          ClientWidth = 1
           TabOrder = 2
           object RadioButton1: TRadioButton
             Left = 154
@@ -1253,19 +1253,19 @@ object Form1: TForm1
           end
         end
         object Panel14: TPanel
-          Left = 1
-          Height = 212
-          Top = 245
-          Width = 492
+          Left = 0
+          Height = 211
+          Top = 246
+          Width = 1
           Align = alClient
-          ClientHeight = 212
-          ClientWidth = 492
+          ClientHeight = 211
+          ClientWidth = 1
           TabOrder = 3
           Visible = False
           object Label6: TLabel
             Left = 15
             Height = 24
-            Top = 20
+            Top = 21
             Width = 74
             Caption = 'Método'
             ParentColor = False
@@ -1341,7 +1341,7 @@ object Form1: TForm1
         object Panel15: TPanel
           Left = 32
           Height = 257
-          Top = 104
+          Top = 103
           Width = 313
           ClientHeight = 257
           ClientWidth = 313
@@ -1360,7 +1360,7 @@ object Form1: TForm1
           object RadioButton5: TRadioButton
             Left = 2
             Height = 52
-            Top = 184
+            Top = 185
             Width = 205
             Caption = 'Somente dados da '#10'curva acumulada'
             OnClick = RadioButton5Click
@@ -1408,10 +1408,10 @@ object Form1: TForm1
         Left = 1
         Height = 458
         Top = 1
-        Width = 526
+        Width = 527
         Align = alLeft
         ClientHeight = 458
-        ClientWidth = 526
+        ClientWidth = 527
         TabOrder = 1
         object Label8: TLabel
           Left = 0
@@ -1442,7 +1442,7 @@ object Form1: TForm1
           Height = 52
           Hint = 'Executar análise ou gráfico'
           Top = 406
-          Width = 246
+          Width = 247
           Caption = 'Executar'
           Font.CharSet = ANSI_CHARSET
           Font.Color = clBlack
@@ -1804,7 +1804,7 @@ object Form1: TForm1
       Left = 1
       Height = 9
       Top = 461
-      Width = 1022
+      Width = 462
       Align = alTop
       Color = clGrayText
       ParentColor = False
@@ -1812,30 +1812,30 @@ object Form1: TForm1
     end
     object Panel8: TPanel
       Left = 1
-      Height = 534
+      Height = 220
       Top = 470
-      Width = 1022
+      Width = 462
       Align = alClient
-      ClientHeight = 534
-      ClientWidth = 1022
+      ClientHeight = 220
+      ClientWidth = 462
       TabOrder = 2
       object Panel11: TPanel
         Left = 1
         Height = 39
         Top = 1
-        Width = 1020
+        Width = 460
         Align = alTop
         ClientHeight = 39
-        ClientWidth = 1020
+        ClientWidth = 460
         TabOrder = 0
         object Label3: TLabel
           Left = 341
-          Height = 24
+          Height = 26
           Top = 2
-          Width = 199
+          Width = 210
           Caption = 'Resultados (Gráficos)'
           Font.CharSet = ANSI_CHARSET
-          Font.Height = -21
+          Font.Height = -22
           Font.Pitch = fpVariable
           Font.Quality = fqDraft
           ParentColor = False
@@ -1946,7 +1946,7 @@ object Form1: TForm1
           StateDisabled.BorderWidth = 1
         end
         object BtnAum3: TColorSpeedButton
-          Left = 979
+          Left = 419
           Height = 37
           Hint = 'Aumentar janela'
           Top = 1
@@ -2488,9 +2488,9 @@ object Form1: TForm1
       end
       object PageControl1: TPageControl
         Left = 1
-        Height = 493
+        Height = 179
         Top = 40
-        Width = 1020
+        Width = 460
         Align = alClient
         TabOrder = 1
         OnChange = PageControl1Change
@@ -2499,7 +2499,7 @@ object Form1: TForm1
   end
   object Splitter2: TSplitter
     Left = 825
-    Height = 1005
+    Height = 691
     Top = 0
     Width = 9
     Color = clGrayText
@@ -2556,7 +2556,7 @@ object Form1: TForm1
     FileFormat = sfUser
     Options = [boAutoCalc, boReadFormulas]
     Left = 488
-    Top = 201
+    Top = 202
   end
   object sWorkbookSource2: TsWorkbookSource
     FileFormat = sfUser
